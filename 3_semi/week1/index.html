@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クイズアプリ</title>
+  </head>
+  <body>
+    <h1>この画像はなんでしょう？</h1>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Moon_Ganymede_by_NOAA.jpg/200px-Moon_Ganymede_by_NOAA.jpg"
+      alt=""
+    />
+
+    <div>
+      <button id="button">ガニメデ</button>
+      <button id="button-2">カリスト</button>
+      <div id="display"></div>
+      <div id="display-2"></div>
+
+      <script>
+        const button = document.getElementById("button")
+        const display = document.getElementById("display")
+        button.onclick = function() {
+          display.textContent = "正解です"
+        }
+        const buttonTwo = document.getElementById("button-2")
+        // eslint-disable-next-line no-unused-vars
+        const displayTwo = document.getElementById("display-2")
+        buttonTwo.onclick = function() {
+          display.textContent = "ハズレです"
+        }
+      </script>
+    </div>
+
+    <div>
+      <h1>この画像は何でしょう</h1>
+      <img
+        src="https://www.kyounoryouri.jp/upfile/r/new_xl_19303_03197.jpg?bustcache=1528680562"
+        alt=""
+      />
+    </div>
+
+    <div>
+      <button id="button-3">ボルシチ</button>
+      <button id="button-4">ザワークラウト</button>
+      <div id="display-3"></div>
+      <div id="display-4"></div>
+
+      <script>
+        const button = document.getelemet
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo</title>
+  </head>
+  <body>
+    <input type="text" id="memo-input" />
+    
+    <button id="add-button">保存する</button>
+    <div id=memo-container></div></div>
+
+    <script>
+      const inputElement = document.getElementById("memo-input")
+      const addButton=document.getElementById("add-button")
+      const memoContainer = document.getElementById("memo-container")
+      let memos = ["りんご", "ゴリラ", "ラッパ"]
+
+    
+    addButton.onclick=function(){
+      memos.push(inputElement.value)
+     memoContainer.innerHTML=""
+
+      for(let i=0; i<=memos.length; i++ ){
+        
+        const text = memos[i]
+        const memoBox = document.createElement("div")
+        const memoContent = document.createElement("div")
+        memoContent.textContent = text
+        console.dir(inputElement)
+        memoBox.append(memoContent)
+        inputElement.value = ""
+        memoContainer.append(memoBox)
+   }
+
+   localStorage.memos=JSON.stringfy(memos)
+}
+    </script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -27,6 +28,14 @@
         console.dir(inputElement)
         memoContainer.append(div)
         inputElement.value = ""
+        
+        const deleteButton = document.createElement("button")
+        deleteButton.textContent = "Delete"
+        deleteButton.onclick = function(){
+        memoBox.remove()
+        }
+        memoBox.append(deleteButton)
+        memoContainer.append(memoBox)
     }
     </script>
   </body>
